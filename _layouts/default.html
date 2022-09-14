@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='{{ site.lang | default: "en-US" }}'>
+<head>
+    {% include common.html %}
+    {% seo %}
+    {% include head-custom.html %}
+</head>
+<body>
+{% include menu.html logoless=true %}
+<header class="page-header" role="banner">
+    <h1 class="project-name"><img src="{{ '/assets/dv-logo-text.svg'}}"></h1>
+    <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline
+        }}</h2>
+    <h2 class="project-tagline">{{ site.contact }}</h2>
+</header>
+{% include footer.html fixed=true %}
+<main id="content" class="main-content" role="main">
+    {{ content }}
+</main>
+</body>
+</html>
